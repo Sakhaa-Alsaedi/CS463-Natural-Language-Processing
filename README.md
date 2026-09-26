@@ -1,12 +1,13 @@
+
 # CS463 — Natural Language Processing
+<img width="2172" height="724" alt="Image" src="https://github.com/user-attachments/assets/650b6303-1fae-4cce-a001-31f9b25d71d1" />
+
+Welcome to the CS463 course repository. It brings together lecture slides, hands-on labs, Jupyter/Google Colab notebooks, shell exercises, and selected readings for natural language processing. The course introduces both theory and practice in programs that understand, generate, translate, and extract information from written language. It compares conventional and statistical techniques, then applies them to question answering, summarization, and machine translation. Arabic examples are included throughout where appropriate.
 
 **College of Computer Science and Engineering · Taibah University**  
 **Term:** Fall 2026–1448 · **Credit hours:** 3 · **Prerequisite:** CS362  
-**Instructor:** Dr. Sakhaa Bandar Alsaedi · **Email:** [sbssaedi@taibahu.edu.sa](mailto:sbssaedi@taibahu.edu.sa)  
-**Office:** Building 204, Level 2, Faculty Room 334  
+**Instructor:** Dr. Sakhaa Alsaedi · **Email:** [sbssaedi@taibahu.edu.sa](mailto:sbssaedi@taibahu.edu.sa)  
 **Office hours:** Monday, 12:30–1:30 PM · Wednesday, 1:40–2:40 PM
-
-Welcome to the CS463 course repository. It brings together lecture slides, hands-on labs, Jupyter/Google Colab notebooks, shell exercises, and selected readings for natural language processing (NLP). The course introduces both theory and practice in programs that understand, generate, translate, and extract information from written language. It compares conventional and statistical techniques, then applies them to question answering, summarization, and machine translation. Arabic examples are included throughout where appropriate.
 
 > **Course materials:** Slides and course-authored notebooks will be linked as they are added. The external resources below are supplementary learning materials. Check the official course platform for submission instructions and assessment dates.
 
@@ -84,20 +85,6 @@ Each student selects one paper for a **15-minute presentation**, followed by **5
 
 - [Journal club paper selection and presentation tracker](https://taibahuniv-my.sharepoint.com/:x:/g/personal/sbssaedi_taibahu_edu_sa/IQCBBFIzs7bdQ6adCq21BTC_AZ3e33sRmZTyYzCcZehl45Q?e=SkhejA)
 - For each presentation, explain the research problem, method, data, evaluation, main results, limitations, and one follow-up idea.
-
-## Assessment
-
-The Fall 2026 course card lists the following assessment weights. Refer to the course platform for exact dates and submission instructions.
-
-| Assessment | Scheduled week | Weight |
-|---|---:|---:|
-| First midterm exam | 7 | 15% |
-| Second midterm exam | 11 | 20% |
-| Exercises and homework | 8 | 5% |
-| Group project | 13 | 20% |
-| Final exam | 16–18 | 40% |
-
-Individual assignments must be original work. For group tasks, collaborate within your assigned group and cite all material you use. Follow the university's Student Handbook and course instructions for academic conduct and attendance.
 
 ## Recommended learning resources
 

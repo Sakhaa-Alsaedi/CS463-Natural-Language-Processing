@@ -2,12 +2,13 @@
 # CS463 — Natural Language Processing
 <img width="2172" height="724" alt="Image" src="https://github.com/user-attachments/assets/650b6303-1fae-4cce-a001-31f9b25d71d1" />
 
-Welcome to the CS463 course repository. It brings together lecture slides, hands-on labs, Jupyter/Google Colab notebooks, shell exercises, and selected readings for natural language processing. The course introduces both theory and practice in programs that understand, generate, translate, and extract information from written language. It compares conventional and statistical techniques, then applies them to question answering, summarization, and machine translation. Arabic examples are included throughout where appropriate.
+Welcome to the CS463 course repository. It brings together lecture slides, hands-on labs, Jupyter/Google Colab notebooks, shell exercises, and selected readings for natural language processing (NLP). The course introduces both theory and practice in programs that understand, generate, translate, and extract information from written language. It compares conventional and statistical techniques, then applies them to question answering, summarization, and machine translation. Arabic examples are included throughout where appropriate.
 
 **College of Computer Science and Engineering · Taibah University**  
 **Term:** Fall 2026–1448 · **Credit hours:** 3 · **Prerequisite:** CS362  
 **Instructor:** Dr. Sakhaa Alsaedi · **Email:** [sbssaedi@taibahu.edu.sa](mailto:sbssaedi@taibahu.edu.sa)  
 **Office hours:** Monday, 12:30–1:30 PM · Wednesday, 1:40–2:40 PM
+
 
 > **Course materials:** Slides and course-authored notebooks will be linked as they are added. The external resources below are supplementary learning materials. Check the official course platform for submission instructions and assessment dates.
 
@@ -48,21 +49,21 @@ The folder names describe where to place future materials; they do not imply tha
 
 | Week and lecture | Lab name | Lab activity | Supplementary resource |
 |---|---|---|---|
-| **1 — Introduction to NLP** | Explore a corpus | Inspect sentences, tokens, vocabulary, and word frequencies in English and Arabic text. | [NLTK: Language Processing and Python](https://www.nltk.org/book/ch01.html) |
-| **2 — Regular expressions** | Text patterns in shell and Python | Extract dates, emails, and hashtags with `grep` and Python `re`; compare matches and Unicode behavior. | [NLTK: Processing Raw Text](https://www.nltk.org/book/ch03.html) |
-| **3 — Morphology** | Analyze Arabic words | Compare stemming, lemmatization, and morphological analyses with CAMeL Tools. Try its command-line utilities and guided Colab. | [CAMeL CLI documentation](https://camel-tools.readthedocs.io/en/latest/cli_tools.html) · [CAMeL guided Colab](https://colab.research.google.com/drive/1Y3qCbD6Gw1KEw-lixQx1rI6WlyWnrnDS) |
-| **4 — Language models** | Build a bigram model | Count n-grams, estimate next-word probabilities, generate short text, and compare with a pretrained model. | [NLTK: Corpora and conditional frequency distributions](https://www.nltk.org/book/ch02.html) · [Hugging Face: Causal language modeling](https://huggingface.co/docs/transformers/en/tasks/language_modeling) |
-| **5 — Part-of-speech tagging I** | Tag from the terminal | Run a command-line POS tagger on a text file and inspect ambiguous words and tag labels. | [Stanford CoreNLP: POS tagging](https://stanfordnlp.github.io/CoreNLP/pos.html) · [Command-line setup](https://stanfordnlp.github.io/CoreNLP/cmdline.html) |
-| **6 — Part-of-speech tagging II** | Evaluate taggers | Compare baseline, unigram, and n-gram taggers in a notebook; calculate accuracy and inspect errors. | [NLTK: Categorizing and Tagging Words](https://www.nltk.org/book/ch05.html) · [spaCy linguistic features](https://spacy.io/usage/linguistic-features) |
+| **1 — Introduction to NLP** | A text-to-annotation pipeline | Inspect English and Arabic samples. Show tokenization, ambiguity, and the output of a pretrained POS/dependency pipeline; label the linguistic levels introduced in the slides. | [NLTK Book, Ch. 1](https://www.nltk.org/book/ch01.html) · [Stanza pipeline](https://stanfordnlp.github.io/stanza/pipeline.html) |
+| **2 — Regular expressions** | Regex: shell versus Python | Use `grep -E` and Python `re` on the same UTF-8 corpus; extract dates, hashtags, and word variants, then measure precision and recall against a small hand-labeled answer key. | [NLTK Book, Ch. 3](https://www.nltk.org/book/ch03.html) |
+| **3 — Morphology** | Arabic roots and analyses | Count words and plot a small Zipf curve; compare rule-based stemming with CAMeL morphological analyses (roots, stems, patterns, and affixes). Inspect ambiguous Arabic forms rather than assuming one analysis per word. | [CAMeL CLI](https://camel-tools.readthedocs.io/en/latest/cli_tools.html) · [CAMeL guided Colab](https://colab.research.google.com/drive/1Y3qCbD6Gw1KEw-lixQx1rI6WlyWnrnDS) |
+| **4 — Language models** | N-grams, smoothing, perplexity | Implement unigram and bigram counts; compare unsmoothed and add-one/interpolated probabilities, handle unseen words, and report held-out perplexity. Optionally compare generated text with a small pretrained causal LM. | [NLTK `lm`](https://www.nltk.org/api/nltk.lm.html) · [Hugging Face causal LM](https://huggingface.co/docs/transformers/en/tasks/language_modeling) |
+| **5 — Part-of-speech tagging I** | POS from the terminal | Run Stanford CoreNLP POS tagging from a shell on supplied sentences; inspect open/closed classes and ambiguous words. Repeat selected Arabic sentences with CAMeL or Stanza and compare tagsets. | [CoreNLP POS CLI](https://stanfordnlp.github.io/CoreNLP/pos.html) · [Stanza POS](https://stanfordnlp.github.io/stanza/pos.html) |
+| **6 — Part-of-speech tagging II** | Baselines versus pretrained tags | Build default, unigram, and n-gram taggers; measure token accuracy and inspect a confusion table. Compare their mistakes with a pretrained tagger, keeping English and Arabic evaluations separate. | [NLTK Book, Ch. 5](https://www.nltk.org/book/ch05.html) · [CAMeL Tools](https://camel-tools.readthedocs.io/) |
 | **7 — First midterm** | — | No regular lab. | — |
-| **8 — Hidden Markov models** | Viterbi decoding | Calculate transition and emission probabilities for a small tagging example, then implement Viterbi step by step. | [NLTK tagging chapter](https://www.nltk.org/book/ch05.html) |
-| **9 — Syntactic and statistical parsing** | Parse ambiguous sentences | Build CFG and PCFG examples; compare parse trees and visualize dependencies. | [NLTK: Analyzing Sentence Structure](https://www.nltk.org/book/ch08.html) · [spaCy visualizers](https://spacy.io/usage/visualizers) |
-| **10 — Lexical and statistical semantics** | Compare meanings | Examine WordNet senses and similarity; compare context-sensitive sentence representations. | [NLTK: Lexical Resources](https://www.nltk.org/book/ch02.html) · [Meaning of Sentences](https://www.nltk.org/book/ch10.html) |
+| **8 — Hidden Markov models** | Forward and Viterbi | Use a tiny two-state tagging HMM to calculate sequence likelihood with the forward algorithm and the best tag path with Viterbi; compare the two quantities and draw the trellis. | [NLTK tagging background](https://www.nltk.org/book/ch05.html) · Instructor notebook with a small transition/emission table |
+| **9 — Syntactic and statistical parsing** | CKY and probabilistic parses | Fill a CKY chart by hand for a short ambiguous sentence; define a PCFG in NLTK, rank parses with `ViterbiParser`, then compare constituency output with a pretrained dependency parser. | [NLTK parsing](https://www.nltk.org/book/ch08.html) · [ViterbiParser](https://www.nltk.org/api/nltk.parse.viterbi.html) · [Stanza dependencies](https://stanfordnlp.github.io/stanza/depparse.html) |
+| **10 — Lexical and statistical semantics** | Word senses and meaning | Explore WordNet relations and two senses of an ambiguous word. Construct a simple logical/semantic representation for one sentence; compare lexical similarity with a contextual embedding as an extension. | [NLTK lexical resources](https://www.nltk.org/book/ch02.html) · [NLTK sentence meaning](https://www.nltk.org/book/ch10.html) |
 | **11 — Second midterm** | — | No regular lab. | — |
-| **12 — Computational discourse** | Track references | Resolve pronouns and entities across sentences; inspect a discourse representation. | [NLTK discourse examples](https://www.nltk.org/howto/drt.html) |
-| **13 — Question answering and summarization** | Answer and summarize | Apply models to a supplied passage; compare answers and summaries with the source for factual accuracy. | [Hugging Face: Question answering](https://huggingface.co/learn/llm-course/chapter7/7) · [Summarization](https://huggingface.co/learn/llm-course/en/chapter7/5) |
-| **14 — Machine translation** | Translate and evaluate | Translate short English–Arabic examples and analyze errors in meaning, morphology, and word order. | [Hugging Face: Translation](https://huggingface.co/learn/llm-course/en/chapter7/4?fw=pt) |
-| **15 — Speech processing** | Transcribe and synthesize | Transcribe a short recording, inspect recognition errors, and demonstrate text-to-speech. | [Hugging Face Audio Course](https://huggingface.co/learn/audio-course/chapter0/introduction) · [SpeechBrain tutorials](https://speechbrain.readthedocs.io/en/v1.0.1/tutorials.html) |
+| **12 — Computational discourse** | Coherence and reference | Reorder a short paragraph and ask which version is more coherent. Annotate pronoun references across sentences, then build a small discourse representation. | [NLTK discourse examples](https://www.nltk.org/howto/drt.html) |
+| **13 — Question answering and summarization** | Retrieve, answer, summarize | On a fixed document set, compare keyword retrieval with extractive QA; build an extractive summary and compare it with a pretrained abstractive model. Score sentence selection with precision/recall and audit generated claims against the source. | [Hugging Face QA](https://huggingface.co/learn/llm-course/chapter7/7) · [Summarization](https://huggingface.co/learn/llm-course/en/chapter7/5) |
+| **14 — Machine translation** | Alignment and BLEU | Manually align words in a short bilingual pair, compare a literal baseline with a pretrained Arabic–English translation model, calculate corpus BLEU with SacreBLEU, and inspect meaning and morphology errors. | [Hugging Face translation](https://huggingface.co/learn/llm-course/en/chapter7/4?fw=pt) · [SacreBLEU](https://github.com/mjpost/sacrebleu) |
+| **15 — Speech processing** | MFCC, ASR, and WER | Plot a waveform/spectrogram and MFCCs from a short recording; transcribe clean and noisy speech with a pretrained ASR model and compute word error rate. Treat TTS as an optional extension. | [Hugging Face Audio Course](https://huggingface.co/learn/audio-course/chapter0/introduction) · [JiWER](https://github.com/jitsi/jiwer) |
 
 ## Shell-based activities
 
@@ -86,6 +87,20 @@ Each student selects one paper for a **15-minute presentation**, followed by **5
 - [Journal club paper selection and presentation tracker](https://taibahuniv-my.sharepoint.com/:x:/g/personal/sbssaedi_taibahu_edu_sa/IQCBBFIzs7bdQ6adCq21BTC_AZ3e33sRmZTyYzCcZehl45Q?e=SkhejA)
 - For each presentation, explain the research problem, method, data, evaluation, main results, limitations, and one follow-up idea.
 
+## Assessment
+
+The Fall 2026 course card lists the following assessment weights. Refer to the course platform for exact dates and submission instructions.
+
+| Assessment | Scheduled week | Weight |
+|---|---:|---:|
+| First midterm exam | 7 | 15% |
+| Second midterm exam | 11 | 20% |
+| Exercises and homework | 8 | 5% |
+| Group project | 13 | 20% |
+| Final exam | 16–18 | 40% |
+
+Individual assignments must be original work. For group tasks, collaborate within your assigned group and cite all material you use. Follow the university's Student Handbook and course instructions for academic conduct and attendance.
+
 ## Recommended learning resources
 
 **Required textbook in the course card:** Daniel Jurafsky and James H. Martin, *Speech and Language Processing*, 2nd edition (2008) or a later edition. The authors also provide an [online third-edition draft](https://web.stanford.edu/~jurafsky/slp3/); its chapter organization may differ from the second edition.
@@ -103,3 +118,4 @@ Each student selects one paper for a **15-minute presentation**, followed by **5
 ## Using the materials
 
 Course-authored slides and lab files will appear in their corresponding folders. External tutorials belong to their respective authors; follow their licenses and cite them when reusing material. If a hosted notebook or dependency changes, consult the linked project's current documentation.
+g to their respective authors; follow their licenses and cite them when reusing material. If a hosted notebook or dependency changes, consult the linked project's current documentation.
